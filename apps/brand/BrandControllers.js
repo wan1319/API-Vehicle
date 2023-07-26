@@ -38,11 +38,11 @@ BrandControllers.get(
         BaseValidatorRun(),
     ],
     async (req, res) => {
-        const daftarPotongan = await PotonganServiceList(
+        const daftarBrand = await BrandServiceList(
             req.query.terms,
             req.query.page
         );
-        return res.status(200).json(daftarPotongan);
+        return res.status(200).json(daftarBrand);
     }
 );
 
