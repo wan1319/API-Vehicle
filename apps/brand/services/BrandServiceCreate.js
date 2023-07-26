@@ -4,13 +4,18 @@ const { BRAND_CONFIG_MAIN_TABLE } = require("../Config");
 const BrandServiceCreate = async (
     brandID,
     brandName,
-    createdBy
-
+    createdBy,
+    updatedBy,
 ) => {
+    const createdAt = new Date().toISOString();
+
     const data = {
         brandID,
         brandName,
-        createdBy
+        createdAt,
+        createdBy,
+        updatedAt,
+        updatedBy: createdBy
     };
 
     await BaseServiceQueryBuilder(BRAND_CONFIG_MAIN_TABLE).insert(data);

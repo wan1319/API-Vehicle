@@ -3,8 +3,15 @@ const ConfigCTA = {};
 ConfigCTA.CTA_MESSAGE_REQUEST_ERROR = {
   title: "Oops!",
   message:
+  "Terjadi kesalahan saat memproses data.",
+};
+
+ConfigCTA.CTA_MESSAGE_CREATE_ERROR = {
+  title: "Oops!",
+  message:
     "Terjadi kesalahan saat memproses data. Silakan periksa kembali informasi yang Anda masukkan dan pastikan semuanya diisi dengan benar.",
 };
+
 
 ConfigCTA.CTA_MESSAGE_SIGNIN_ERROR = {
   title: "Oops!",
@@ -38,7 +45,18 @@ ConfigCTA.CTA_MESSAGE_SUCCESS_CREATE = {
   message: "Data berhasil ditambahkan.",
 };
 
+ConfigCTA.CTA_MESSAGE_ERROR_CREATE = {
+  title: "Sukses!",
+  message: "Data berhasil ditambahkan.",
+};
+
 ConfigCTA.CTA_MESSAGE_SUCCESS_UPDATE = {
+  title: "Sukses!",
+  type: "success",
+  message: "Data berhasil diperbarui.",
+};
+
+ConfigCTA.CTA_MESSAGE_ERROR_UPDATE = {
   title: "Sukses!",
   type: "success",
   message: "Data berhasil diperbarui.",

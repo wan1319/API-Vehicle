@@ -31,7 +31,7 @@ const UserValidators = {
             .notEmpty()
             .withMessage("Passsword wajib diisi.")
             .trim()
-            .isLength({ min: 8, max: 100 })
+            .isLength({ min: 6, max: 100 })
             .withMessage("password minimal 8 karakter.")
             .bail()
             .custom(async (value, { req }) => {

@@ -8,7 +8,7 @@ const BrandServiceList = async (terms, page) => {
     if (terms) {
         queryBuilder
             .whereILike("brandID", `%${terms}%`)
-            .orWhereILike("nrandName", `%${terms}%`);
+            .orWhereILike("brandName", `%${terms}%`);
     }
 
     return {

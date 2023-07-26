@@ -1,15 +1,16 @@
 const BaseServiceQueryBuilder = require("../../base/services/BaseServiceQueryBuilder");
-const _ = require("lodash");
 const { BRAND_CONFIG_MAIN_TABLE } = require("../Config");
 
-const BrandServiceGet = async (field, value, many = false) => {
-  const results = await BaseServiceQueryBuilder(BRAND_CONFIG_MAIN_TABLE).where(
-    { [field]: value }
-  );
+const BrandServiceGet = async (brandID) => {
+    const brand = await BaseServiceQueryBuilder(BRAND_CONFIG_MAIN_TABLE)
+        .where({ brandID })
+        .first();
 
-  if (many) return results;
+    if (!brand) {
+        return null;
+    }
 
-  return results[0];
+    return brand;
 };
 
 module.exports = BrandServiceGet;
