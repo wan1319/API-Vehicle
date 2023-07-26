@@ -30,7 +30,7 @@ BrandControllers.post(
     }
 );
 
-PotonganControllers.get(
+BrandControllers.get(
     "/",
     [
         UserServiceTokenAuthentication,
@@ -46,7 +46,7 @@ PotonganControllers.get(
     }
 );
 
-PotonganControllers.get(
+BrandControllers.get(
     "/:brandID",
     [
         UserServiceTokenAuthentication,
@@ -59,7 +59,7 @@ PotonganControllers.get(
     }
 );
 
-PotonganControllers.put(
+BrandControllers.put(
     "/:brandID",
     [
         UserServiceTokenAuthentication,
