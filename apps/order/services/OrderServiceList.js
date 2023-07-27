@@ -1,14 +1,14 @@
 const BaseServicePaginator = require("../../base/services/BaseServicePaginator");
 const BaseServiceQueryBuilder = require("../../base/services/BaseServiceQueryBuilder");
-const { BRAND_CONFIG_MAIN_TABLE } = require("../Config");
+const { ORDER_CONFIG_MAIN_TABLE } = require("../Config");
 
 const BrandServiceList = async (terms, page) => {
-    const queryBuilder = BaseServiceQueryBuilder(BRAND_CONFIG_MAIN_TABLE);
+    const queryBuilder = BaseServiceQueryBuilder(ORDER_CONFIG_MAIN_TABLE);
 
     if (terms) {
         queryBuilder
-            .whereILike("brandID", `%${terms}%`)
-            .orWhereILike("brandName", `%${terms}%`);
+            .whereILike("userID", `%${terms}%`)
+            .orWhereILike("vehicleID", `%${terms}%`);
     }
     
     return {

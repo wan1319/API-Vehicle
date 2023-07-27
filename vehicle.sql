@@ -1,10 +1,11 @@
+-- Set SQL mode and transaction properties
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
 -- Create the "users" table
 CREATE TABLE users (
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
   email VARCHAR(255),
   password VARCHAR(255),
   fullname VARCHAR(255),
@@ -15,7 +16,7 @@ CREATE TABLE users (
 
 -- Create the "vehicle_brands" table
 CREATE TABLE vehicle_brands (
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(255),
   photo VARCHAR(255),
   created_at TIMESTAMP,
@@ -28,7 +29,7 @@ CREATE TABLE vehicle_brands (
 
 -- Create the "vehicles" table
 CREATE TABLE vehicles (
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(255),
   vehicle_brand_id INTEGER,
   photo VARCHAR(255),
@@ -45,7 +46,7 @@ CREATE TABLE vehicles (
 
 -- Create the "orders" table
 CREATE TABLE orders (
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
   user_id INTEGER,
   vehicle_id INTEGER,
   created_at TIMESTAMP,

@@ -1,4 +1,4 @@
-const { ORDER_CONFIG_MAIN_TABLE } = require("../config");
+const { ORDER_CONFIG_MAIN_TABLE } = require("../Config");
 const BaseServiceQueryBuilder = require("../../base/services/BaseServiceQueryBuilder");
 
 const OrderServiceCreate = async (userID, vehicleID) => {

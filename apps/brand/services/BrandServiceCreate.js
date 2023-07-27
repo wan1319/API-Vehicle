@@ -5,17 +5,16 @@ const BrandServiceCreate = async (
     brandID,
     brandName,
     createdBy,
-    updatedBy,
 ) => {
-    const createdAt = new Date().toISOString();
+    const currentDate = new Date().toISOString();
 
     const data = {
         brandID,
         brandName,
-        createdAt,
+        createdAt: currentDate,
         createdBy,
-        updatedAt,
-        updatedBy: createdBy
+        updatedAt: currentDate,
+        updatedBy: createdBy,
     };
 
     await BaseServiceQueryBuilder(BRAND_CONFIG_MAIN_TABLE).insert(data);
